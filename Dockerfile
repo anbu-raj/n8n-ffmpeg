@@ -12,8 +12,7 @@ RUN apt-get update \
 
 RUN npm install -g n8n@2.10.2
 
-RUN useradd -m -s /bin/bash node \
-    && mkdir -p /home/node/.n8n \
+RUN mkdir -p /home/node/.n8n \
     && chown -R node:node /home/node
 
 USER node
